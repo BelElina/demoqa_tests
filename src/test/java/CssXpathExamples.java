@@ -38,6 +38,11 @@ public class CssXpathExamples {
         $x("//div[text()='Hello, qa.guru!']").click();
         $(byText("Hello, qa.guru!")).click();
         $(withText("llo, qa.gur")).click();
+        $(".class_name:not(.class_name2)"); //класс, не содержащий класс с названием 2
 
+        $("").parent().parent(); //переходит от элемента к родителю, к родителю родителя
+        $("").closest("h1"); //ищет вверх по дереву ближайший эл-т с названием h1
+        $("").closest("h1").sibling(0); //ищет вниз по дереву ближайшую сестру h1
+        $("").closest("h1").sibling(0).preceding(1); //ищет вверх по дереву
     }
 }
